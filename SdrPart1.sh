@@ -1,4 +1,3 @@
-
 #!/bin/bash
 # Script to automated install process for install on ubuntu 20.40
 # KB3GTN
