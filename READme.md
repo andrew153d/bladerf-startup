@@ -23,6 +23,13 @@ sudo chmod +x *.sh
 
 ---
 
+### Step 3: Install SDR Software
+Run the script to install BladeRF, RTL-SDR, SoapySDR, and CubicSDR
+```bash
+sudo ./SdrInstalls.sh
+```
+
+---
 ### Step 3: Optional Configurations
 #### Static IP Address
 If you want to set a static IP address, run:
