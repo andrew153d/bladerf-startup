@@ -4,8 +4,6 @@ sudo apt purge bladerf libbladerf-dev cubicsdr -y
 rm hostedxA4-latest.rbf
 rm bladeRF_fw_latest.img
 
-
-
 sudo apt-get update
 
 # setup networking #
@@ -26,32 +24,7 @@ network:\n\
 sudo netplan apply
 sudo systemctl restart network-manager
 
-# vnc server #
-sudo apt update
-sudo apt install lightdm
-#sudo reboot 
-sudo apt install x11vnc
-
-touch /lib/systemd/system/x11vnc.service
-echo -e '[Unit]\n\
-Description=x11vnc service\n\
-After=display-manager.service network.target syslog.target\n\
-\n\
-[Service]\n\
-Type=simple\n\
-ExecStart=/usr/bin/x11vnc -forever -display :0 -auth guess -passwd password\n\
-ExecStop=/usr/bin/killall x11vnc\n\
-Restart=on-failure\n\
-\n\
-[Install]\n\
-WantedBy=multi-user.target' | sudo tee /lib/systemd/system/x11vnc.service > /dev/null
-
-systemctl daemon-reload
-systemctl enable x11vnc.service
-systemctl start x11vnc.service
-systemctl status x11vnc.service
-
-# install bladerf with ubuntu ppa#
+# install bladerf#
 # https://github.com/Nuand/bladeRF/wiki/Getting-Started%3A-Linux #
 
 git clone https://github.com/Nuand/bladeRF.git ./bladeRF
