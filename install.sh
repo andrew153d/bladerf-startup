@@ -1,6 +1,6 @@
 
 # purge existing packages if present #
-sudo apt purge bladerf libbladerf-dev cubicsdr -y
+# sudo apt purge bladerf libbladerf-dev cubicsdr -y
 rm hostedxA4-latest.rbf
 rm bladeRF_fw_latest.img
 
