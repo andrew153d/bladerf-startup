@@ -9,7 +9,7 @@ sudo apt-get update
 # install bladerf#
 # https://github.com/Nuand/bladeRF/wiki/Getting-Started%3A-Linux #
 rm -rf ./bladeRF
-git clone https://github.com/Nuand/bladeRF.git ./bladeRF
+git clone https://github.com/Nuand/bladeRF.git ./bladeRF --recursive
 cd ./bladeRF
 cd host/
 mkdir build
