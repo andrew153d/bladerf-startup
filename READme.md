@@ -25,9 +25,15 @@ sudo chmod +x *.sh
 
 ### Step 3: Install SDR Software
 Run the script to install BladeRF, RTL-SDR, SoapySDR, and CubicSDR
-```bash
-sudo ./SdrInstalls.sh
-```
+1. Run the first part of the SDR setup:
+   ```bash
+   ./SdrPart1.sh
+   ```
+2. Reboot your system.
+3. After rebooting, run the second part of the SDR setup:
+   ```bash
+   ./SdrPart2.sh
+   ```
 
 ---
 ### Step 3: Optional Configurations
