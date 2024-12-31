@@ -54,7 +54,7 @@ mkdir -p /opt/bladeRF/lib
 echo "* Clone bladeRF repository"
 git clone https://github.com/Nuand/bladeRF --recursive
 echo "* Apt install needed dependencies.."
- apt install python3-six python-six python3-lxml libusb-1.0-0-dev libusb-1.0-0 build-essential cmake libncurses5-dev libtecla1 libtecla-dev pkg-config git wget
+ apt install python3-six python-six python3-lxml libusb-1.0-0-dev libusb-1.0-0 build-essential cmake libncurses5-dev libtecla1 libtecla-dev pkg-config git wget -y
 echo "* Starting Build for BladeRF host software.."
 echo " Change Directory to bladeRF/host..."
 cd bladeRF/host
