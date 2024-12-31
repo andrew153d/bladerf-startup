@@ -55,6 +55,9 @@ make
 sudo make install
 
 sudo apt update
-sudo apt -y install cubicsdr
+sudo apt -y install cubicsdr gnuradio
+
+#remove the call from crontab
+crontab -l | grep -v 'SdrPart2' | crontab -
 
 sudo reboot now
