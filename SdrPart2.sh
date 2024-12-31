@@ -1,4 +1,7 @@
 #!/bin/bash
+
+crontab -l | grep -v 'SdrPart2' | crontab -
+
 cd ~/
 wget https://www.nuand.com/fpga/hostedxA4-latest.rbf
 wget https://www.nuand.com/fx3/bladeRF_fw_latest.img
