@@ -2,9 +2,16 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LOG_FILE="$SCRIPT_DIR/startup.log"
-PASSWORD="cyberdeck"
+PASSWORD="$1"
 
-exec > >(tee -a "$LOG_FILE") 2>&1
+# Verify the password by running a sudo command
+echo "$PASSWORD" | sudo -S ls /root > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+    echo "Invalid password or sudo configuration. Exiting."
+    exit 1
+fi
+
+#exec > >(tee -a "$LOG_FILE") 2>&1
 
 # Remove any previous calls from crontab
 crontab -l | grep -v 'SdrPart2' | crontab -
