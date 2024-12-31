@@ -1,24 +1,21 @@
 #!/bin/bash
-# Script to automated install process for install on ubuntu 20.40
-# KB3GTN
 
-# cause bash script to exit on error response code from a command.
 set -e
 
-echo "#######################################################################"
-echo "# BladeRF build / install / setup automation script                   #"
-echo "#                                                                     #"
-echo "#  * This script will make a directory called ~/bladeRF_Install       #"
-echo "#  * Apt install build depencencies for bladeRF build..               #"
-echo "#  * Will clone bladeRF repo into this directory                      #"
-echo "#  * perform build/install of bladeRF host software                   #"
-echo "#  * create /etc/profile.d/bladeRF_paths.sh                           #"
-echo "#  * create /etc/ld.so.conf.d/bladeRF.conf                            #"
-echo "#  * pull latest firmware from nuand's website into autoload path     #"
-echo "#  * create a group called bladeRF                                    #"
-echo "#  * install bladeRF udev rules and restart udevadmin                 #"
-echo "#                                                                     #"
-echo "#######################################################################"
+# echo "#######################################################################"
+# echo "# BladeRF build / install / setup automation script                   #"
+# echo "#                                                                     #"
+# echo "#  * This script will make a directory called ~/bladeRF_Install       #"
+# echo "#  * Apt install build depencencies for bladeRF build..               #"
+# echo "#  * Will clone bladeRF repo into this directory                      #"
+# echo "#  * perform build/install of bladeRF host software                   #"
+# echo "#  * create /etc/profile.d/bladeRF_paths.sh                           #"
+# echo "#  * create /etc/ld.so.conf.d/bladeRF.conf                            #"
+# echo "#  * pull latest firmware from nuand's website into autoload path     #"
+# echo "#  * create a group called bladeRF                                    #"
+# echo "#  * install bladeRF udev rules and restart udevadmin                 #"
+# echo "#                                                                     #"
+# echo "#######################################################################"
 echo " This script requires to be run as root since "
 echo " we need to modify system files."
 echo ""
