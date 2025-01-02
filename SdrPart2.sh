@@ -58,6 +58,6 @@ make
 sudo make install
 
 sudo apt update
-sudo apt -y install cubicsdr gnuradio
+sudo apt install cubicsdr gnuradio python3-soapysdr -y
 
 sudo reboot now
