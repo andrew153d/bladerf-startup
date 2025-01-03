@@ -41,6 +41,7 @@ echo "Installer Starting.."
 ###############################
 # Run install process
 ###############################
+apt update
 
 # Build libbladeRF and install it
 echo "* Making bladeRF build directory."
