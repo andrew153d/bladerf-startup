@@ -42,7 +42,7 @@ echo "Installer Starting.."
 # Run install process
 ###############################
 apt update
-
+apt install git openssh-server net-tools -y #just incase not already installed
 # Build libbladeRF and install it
 echo "* Making bladeRF build directory."
 if [ -d "bladeRF_Install" ]; then
