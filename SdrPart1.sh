@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#set -e
+set -e
 
 # echo "#######################################################################"
 # echo "# BladeRF build / install / setup automation script                   #"
